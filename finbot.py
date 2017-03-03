@@ -75,7 +75,7 @@ def dailyReturn(df):
     col = dailyDf.columns
     for c in col:
         plotHist(dailyDf[c])
-    plt.show()
+        plt.show()
 
     print(col)
     xsc = 'BSE'
@@ -90,7 +90,7 @@ def dailyReturn(df):
 def start():
     startDay = 1
     startMonth = 1
-    startYear = 1990
+    startYear = 2016
     endDay = 1
     endMonth = 6
     endYear = 2017
@@ -113,13 +113,13 @@ def start():
 
         print (df_temp.columns)
         print ('Symb: ',sym)
-        #globalStats(df_temp,sym)
+        globalStats(df_temp,sym)
         df = df.join(df_temp, how='inner')
 
     print (df)
     #plotData(normalizePrice(df))
     #plotData(df)
-    dailyReturn(df)
+    #dailyReturn(df)
 
 if __name__ == '__main__':
     start()
